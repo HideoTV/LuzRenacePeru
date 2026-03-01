@@ -38,7 +38,7 @@ const Navbar = () => {
 
                     {/* Logo */}
                     <Link to="/" onClick={closeMenu} className="flex items-center gap-3">
-                        <img src="/logo-png.png" alt="Luz Renace Logo" className="h-12 w-auto object-contain" />
+                        <img src="/img/logo.png" alt="Luz Renace Logo" className="h-12 w-auto object-contain" />
                         <div className="hidden md:block">
                             <h1 className="font-serif text-xl font-bold text-primary leading-tight">LUZ RENACE</h1>
                             <span className="font-sans text-xs text-neutral-dark tracking-widest uppercase">ONG Perú</span>

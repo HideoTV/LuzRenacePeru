@@ -14,7 +14,7 @@ const Footer = () => {
                         <Link to="/" className="flex items-center gap-3 mb-6">
                             {/* Optional: white version of logo if available */}
                             <div className="bg-white p-2 rounded-md inline-block">
-                                <img src="/logo-png.png" alt="Luz Renace Logo" className="h-10 w-auto object-contain" />
+                                <img src="/img/logo.png" alt="Luz Renace Logo" className="h-10 w-auto object-contain" />
                             </div>
                             <div>
                                 <h2 className="font-serif text-lg font-bold leading-tight">LUZ RENACE</h2>

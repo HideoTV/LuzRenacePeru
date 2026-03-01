@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ title, description, url = 'https://luzrenaceperu.org', image = 'https://luzrenaceperu.org/logo-png.png' }) => {
+const SEO = ({ title, description, url = 'https://luzrenaceperu.org', image = 'https://luzrenaceperu.org/img/logo.png' }) => {
     const siteTitle = 'Luz Renace - ONG Perú';
     const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
     const metaDescription = description || 'Mujeres con propósito que transforman el Perú. ONG peruana enfocada en la institucionalidad y el liderazgo femenino.';
