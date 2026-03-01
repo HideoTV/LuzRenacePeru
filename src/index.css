@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5B2D8C;
+  --color-secondary: #1F3A75;
+  --color-accent: #C9A227;
+  --color-neutral-dark: #374151;
+  --color-neutral-light: #F3F4F6;
+  
+  --font-serif: "Merriweather", serif;
+  --font-sans: "Public Sans", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-neutral-dark bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-primary;
+  }
+}
