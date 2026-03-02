@@ -39,8 +39,15 @@ const Programas = () => {
         <>
             <SEO title="Programas" description="Nuestros programas: Mujer Renace, Mujer Construye, Mujer Avanza y proyectos de Casa Refugio." />
 
-            <section className="bg-neutral-light pt-24 pb-20 text-center border-b border-neutral-200">
+            <section className="bg-primary/5 pt-24 pb-20 border-b border-primary/10 text-center">
                 <div className="container mx-auto px-4 max-w-4xl">
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary"
+                    >
+                        <Briefcase size={32} />
+                    </motion.div>
                     <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -97,15 +104,15 @@ const Programas = () => {
             </section>
 
             {/* Testimonial / Impact Stat */}
-            <section className="py-20 bg-primary text-white">
+            <section className="py-20 bg-primary/5">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
-                    <h2 className="text-3xl font-bold font-serif mb-8">Nuestros programas transforman vidas</h2>
-                    <div className="bg-white/10 p-10 rounded-2xl backdrop-blur-sm border border-white/20">
-                        <p className="text-xl md:text-2xl font-serif italic mb-6 leading-relaxed">
+                    <div className="bg-white p-10 md:p-14 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-neutral-100">
+                        <p className="text-xl md:text-2xl font-serif italic mb-8 leading-relaxed text-primary">
                             "Gracias a Mujer Construye logré formalizar mi negocio y asegurar la educación de mis hijos. Hoy soy una lideresa en mi comunidad."
                         </p>
-                        <p className="font-sans font-bold text-accent uppercase tracking-wider text-sm">
-                            — Beneficiaria Anónima, Cusco
+                        <p className="font-sans font-bold text-accent uppercase tracking-wider text-sm flex items-center justify-center gap-2">
+                            <span className="w-8 h-px bg-accent inline-block"></span>
+                            BENEFICIARIA ANÓNIMA, CUSCO
                         </p>
                     </div>
                 </div>

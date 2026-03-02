@@ -1,7 +1,7 @@
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
-import { Calendar, ChevronRight, Bookmark } from 'lucide-react';
+import { Calendar, ChevronRight, Bookmark, FileText } from 'lucide-react';
 
 const Publicaciones = () => {
     const posts = [
@@ -32,15 +32,24 @@ const Publicaciones = () => {
         <>
             <SEO title="Publicaciones y Noticias" description="Entérate de las últimas noticias, reconocimientos y proyectos de la ONG Luz Renace." />
 
-            <section className="bg-primary/5 pt-24 pb-16">
-                <div className="container mx-auto px-4 max-w-6xl">
+            <section className="bg-primary/5 pt-24 pb-20 border-b border-primary/10">
+                <div className="container mx-auto px-4 max-w-4xl text-center mb-10">
                     <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary"
+                    >
+                        <FileText size={32} />
+                    </motion.div>
+                    <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="flex items-center justify-between mb-10"
+                        className="text-4xl md:text-5xl font-bold font-serif text-primary"
                     >
-                        <h1 className="text-4xl md:text-5xl font-bold font-serif text-primary">Publicaciones Institucionales</h1>
-                    </motion.div>
+                        Publicaciones Institucionales
+                    </motion.h1>
+                </div>
+                <div className="container mx-auto px-4 max-w-6xl">
 
                     {/* Highlighted Note */}
                     <motion.div

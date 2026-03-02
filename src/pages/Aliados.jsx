@@ -8,12 +8,19 @@ const Aliados = () => {
         <>
             <SEO title="Aliados Estratégicos" description="Alianzas corporativas e institucionales por el desarrollo integral de la mujer." />
 
-            <section className="bg-secondary text-white pt-24 pb-20 border-b border-[#2b4c8f]">
-                <div className="container mx-auto px-4 max-w-5xl text-center">
+            <section className="bg-primary/5 pt-24 pb-20 border-b border-primary/10">
+                <div className="container mx-auto px-4 max-w-4xl text-center">
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary"
+                    >
+                        <Handshake size={32} />
+                    </motion.div>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-bold mb-6 font-serif"
+                        className="text-4xl md:text-5xl font-bold mb-4 font-serif text-primary"
                     >
                         Aliados Estratégicos
                     </motion.h1>
@@ -21,7 +28,7 @@ const Aliados = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-lg text-gray-200 font-sans max-w-3xl mx-auto"
+                        className="text-lg text-neutral-dark font-sans max-w-3xl mx-auto"
                     >
                         El sector privado, las entidades públicas y la cooperación internacional son fundamentales para generar un impacto a gran escala. Juntos, cerramos brechas.
                     </motion.p>
@@ -68,31 +75,28 @@ const Aliados = () => {
                         viewport={{ once: true }}
                         className="flex-1 w-full"
                     >
-                        <div className="bg-primary p-8 md:p-12 rounded-2xl text-white shadow-xl relative overflow-hidden">
-                            <div className="absolute top-0 right-0 -mr-10 -mt-10 opacity-10">
-                                <Handshake size={200} />
-                            </div>
+                        <div className="bg-white p-8 md:p-12 rounded-2xl text-neutral-dark shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-neutral-100 relative overflow-hidden flex flex-col justify-between">
                             <div className="relative z-10">
-                                <h2 className="text-3xl font-bold mb-6 font-serif">Iniciemos una conversación</h2>
-                                <p className="text-gray-200 mb-8 font-sans leading-relaxed">
+                                <h2 className="text-3xl font-bold mb-6 font-serif text-primary">Iniciemos una conversación</h2>
+                                <p className="text-neutral-500 mb-8 font-sans leading-relaxed">
                                     Completa el siguiente formulario y nuestra Dirección de Alianzas e Impacto se comunicará a la brevedad para agendar una reunión institucional.
                                 </p>
                                 <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                                     <div>
-                                        <input type="text" className="w-full px-4 py-3 rounded-lg border-2 border-primary-100/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-accent transition-all font-sans" placeholder="Nombre de la Institución / Empresa" />
+                                        <input type="text" className="w-full px-4 py-3 rounded-lg border border-neutral-300 bg-white text-neutral-dark focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-sans" placeholder="Nombre de la Institución / Empresa" />
                                     </div>
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
-                                            <input type="text" className="w-full px-4 py-3 rounded-lg border-2 border-primary-100/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-accent transition-all font-sans" placeholder="Persona de Contacto" />
+                                            <input type="text" className="w-full px-4 py-3 rounded-lg border border-neutral-300 bg-white text-neutral-dark focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-sans" placeholder="Persona de Contacto" />
                                         </div>
                                         <div>
-                                            <input type="email" className="w-full px-4 py-3 rounded-lg border-2 border-primary-100/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-accent transition-all font-sans" placeholder="Correo Corporativo" />
+                                            <input type="email" className="w-full px-4 py-3 rounded-lg border border-neutral-300 bg-white text-neutral-dark focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-sans" placeholder="Correo Corporativo" />
                                         </div>
                                     </div>
                                     <div>
-                                        <textarea rows="3" className="w-full px-4 py-3 rounded-lg border-2 border-primary-100/20 bg-white/10 text-white placeholder-white/60 focus:outline-none focus:border-accent transition-all font-sans resize-none" placeholder="Breve descripción del interés de alianza"></textarea>
+                                        <textarea rows="3" className="w-full px-4 py-3 rounded-lg border border-neutral-300 bg-white text-neutral-dark focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-sans resize-none" placeholder="Breve descripción del interés de alianza"></textarea>
                                     </div>
-                                    <Button type="submit" variant="accent" className="w-full py-4 shadow-lg">
+                                    <Button type="submit" variant="primary" className="w-full py-4 shadow-lg">
                                         Enviar Propuesta
                                     </Button>
                                 </form>

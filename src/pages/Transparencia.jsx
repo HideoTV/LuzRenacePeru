@@ -8,12 +8,12 @@ const Transparencia = () => {
         <>
             <SEO title="Transparencia" description="Portal de Transparencia de Luz Renace ONG Perú. Declaraciones legales y financieras." />
 
-            <section className="bg-neutral-light pt-24 pb-20 border-b border-neutral-200">
+            <section className="bg-primary/5 pt-24 pb-20 border-b border-primary/10">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        className="w-16 h-16 bg-white shadow-sm rounded-full flex items-center justify-center mx-auto mb-6 text-primary"
+                        className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary"
                     >
                         <Lock size={32} />
                     </motion.div>

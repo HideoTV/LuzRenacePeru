@@ -38,10 +38,10 @@ const Navbar = () => {
 
                     {/* Logo */}
                     <Link to="/" onClick={closeMenu} className="flex items-center gap-3">
-                        <img src="/img/logo.png" alt="Luz Renace Logo" className="h-12 w-auto object-contain" />
-                        <div className="hidden md:block">
-                            <h1 className="font-serif text-xl font-bold text-primary leading-tight">LUZ RENACE</h1>
-                            <span className="font-sans text-xs text-neutral-dark tracking-widest uppercase">ONG Perú</span>
+                        <img src="/img/logo.png" alt="Luz Renace Logo" className="h-10 md:h-12 w-auto object-contain" />
+                        <div className="flex flex-col items-start justify-center h-full pt-1">
+                            <h1 className="font-serif text-xl sm:text-2xl font-bold text-[#5c2b8b] tracking-wide leading-tight mt-[-2px]">LUZ RENACE</h1>
+                            <span className="font-sans text-[10px] sm:text-xs text-gray-500 tracking-widest uppercase block mt-[-2px]">ONG Perú</span>
                         </div>
                     </Link>
 
@@ -52,15 +52,15 @@ const Navbar = () => {
                                 <li key={link.name}>
                                     <Link
                                         to={link.path}
-                                        className={`font-sans text-sm font-medium transition-colors hover:text-accent ${isActive(link.path) ? 'text-primary font-bold' : 'text-neutral-dark'}`}
+                                        className={`font-sans text-sm font-bold transition-colors hover:text-[#d8aa25] ${isActive(link.path) ? 'text-[#5c2b8b]' : 'text-[#182d5a]'}`}
                                     >
                                         {link.name}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
-                        <Button variant="accent" className="gap-2 rounded-full px-6 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                            <Heart size={18} fill="currentColor" /> Donar
+                        <Button variant="accent" className="gap-2 rounded-md px-6 shadow-none hover:shadow-md transform transition-all font-bold">
+                            <Heart size={16} fill="currentColor" /> Donar
                         </Button>
                     </nav>
 

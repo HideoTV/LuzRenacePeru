@@ -8,12 +8,19 @@ const Nosotros = () => {
             <SEO title="Nosotros" description="Conoce nuestra historia, misión, visión y los valores que nos impulsan en Luz Renace." />
 
             {/* Page Header */}
-            <section className="bg-primary pt-24 pb-16 text-white text-center">
-                <div className="container mx-auto px-4">
+            <section className="bg-primary/5 pt-24 pb-20 border-b border-primary/10 text-center">
+                <div className="container mx-auto px-4 max-w-4xl text-center">
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary"
+                    >
+                        <CheckCircle size={32} />
+                    </motion.div>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-bold mb-4 font-serif"
+                        className="text-4xl md:text-5xl font-bold mb-4 font-serif text-primary"
                     >
                         Quiénes Somos
                     </motion.h1>
@@ -21,7 +28,7 @@ const Nosotros = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-lg text-primary-100 max-w-2xl mx-auto font-sans"
+                        className="text-lg text-neutral-dark max-w-2xl mx-auto font-sans"
                     >
                         Nuestra institución está comprometida con el desarrollo integral y el fortalecimiento del liderazgo femenino en el Perú.
                     </motion.p>
@@ -86,11 +93,11 @@ const Nosotros = () => {
             </section>
 
             {/* Corporate Values */}
-            <section className="py-20 bg-secondary text-white">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold font-serif mb-4">Nuestros Valores</h2>
-                        <p className="text-gray-300 max-w-2xl mx-auto font-sans">
+                        <p className="text-neutral-dark max-w-2xl mx-auto font-sans">
                             Los pilares que fundamentan nuestras acciones y nos otorgan credibilidad frente a nuestros aliados y beneficiarios.
                         </p>
                     </div>
@@ -102,10 +109,12 @@ const Nosotros = () => {
                             { title: 'Excelencia', val: 'Rigurosidad profesional en la ejecución de todos nuestros programas.' },
                             { title: 'Integridad', val: 'Actuar bajo principios éticos y profundo respeto a la dignidad humana.' }
                         ].map((item, idx) => (
-                            <div key={idx} className="bg-[#182d5a] p-8 rounded-xl border border-[#2b4c8f] hover:-translate-y-2 transition-transform duration-300">
-                                <CheckCircle className="text-accent mb-4" size={28} />
-                                <h4 className="text-xl font-bold mb-3 font-serif">{item.title}</h4>
-                                <p className="text-sm text-gray-300 font-sans leading-relaxed">
+                            <div key={idx} className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all flex flex-col items-start text-left">
+                                <div className="text-[#d8aa25] mb-6">
+                                    <CheckCircle size={32} />
+                                </div>
+                                <h4 className="text-xl font-bold mb-3 font-serif text-[#182d5a]">{item.title}</h4>
+                                <p className="text-sm text-gray-600 font-sans leading-relaxed flex-grow">
                                     {item.val}
                                 </p>
                             </div>

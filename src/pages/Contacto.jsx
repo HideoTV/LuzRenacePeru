@@ -8,8 +8,15 @@ const Contacto = () => {
         <>
             <SEO title="Contacto" description="Comunícate con la ONG Luz Renace Perú a través de nuestros canales oficiales." />
 
-            <section className="bg-primary/5 pt-24 pb-16">
+            <section className="bg-primary/5 pt-24 pb-20 border-b border-primary/10">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary"
+                    >
+                        <Mail size={32} />
+                    </motion.div>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -35,16 +42,16 @@ const Contacto = () => {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="flex-1 lg:max-w-md bg-secondary text-white p-8 md:p-10 rounded-2xl shadow-xl border border-[#2b4c8f] flex flex-col justify-between"
+                        className="flex-1 lg:max-w-md bg-white text-neutral-dark p-8 md:p-10 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-neutral-100 flex flex-col justify-between"
                     >
                         <div>
-                            <h2 className="text-2xl font-bold mb-8 font-serif">Información de Contacto</h2>
+                            <h2 className="text-2xl font-bold mb-8 font-serif text-primary">Información de Contacto</h2>
                             <ul className="space-y-8">
                                 <li className="flex gap-4 items-start">
                                     <MapPin className="text-accent flex-shrink-0 mt-1" size={24} />
                                     <div>
-                                        <h3 className="font-bold font-sans uppercase text-sm tracking-wider text-gray-400 mb-1">Sede Administrativa</h3>
-                                        <p className="font-sans leading-relaxed text-gray-200">
+                                        <h3 className="font-bold font-sans uppercase text-sm tracking-wider text-neutral-500 mb-1">Sede Administrativa</h3>
+                                        <p className="font-sans leading-relaxed text-neutral-dark">
                                             Av. Principal 1234, Oficina 405<br />
                                             Distrito Financiero, Lima<br />
                                             Lima - Perú
@@ -54,19 +61,19 @@ const Contacto = () => {
                                 <li className="flex gap-4 items-start">
                                     <Phone className="text-accent flex-shrink-0 mt-1" size={24} />
                                     <div>
-                                        <h3 className="font-bold font-sans uppercase text-sm tracking-wider text-gray-400 mb-1">Central Telefónica</h3>
-                                        <p className="font-sans text-gray-200">+51 (1) 000-0000</p>
-                                        <p className="font-sans text-gray-200 text-sm italic mt-1">(Lun - Vie: 9:00 am a 6:00 pm)</p>
+                                        <h3 className="font-bold font-sans uppercase text-sm tracking-wider text-neutral-500 mb-1">Central Telefónica</h3>
+                                        <p className="font-sans text-neutral-dark">+51 (1) 000-0000</p>
+                                        <p className="font-sans text-neutral-500 text-sm italic mt-1">(Lun - Vie: 9:00 am a 6:00 pm)</p>
                                     </div>
                                 </li>
                                 <li className="flex gap-4 items-start">
                                     <Mail className="text-accent flex-shrink-0 mt-1" size={24} />
                                     <div>
-                                        <h3 className="font-bold font-sans uppercase text-sm tracking-wider text-gray-400 mb-1">Correos Oficiales</h3>
-                                        <div className="space-y-2 text-sm text-gray-200 font-sans">
-                                            <p><strong className="text-white block">Consultas Generales:</strong> contacto@luzrenaceperu.org</p>
-                                            <p><strong className="text-white block">Área de Prensa:</strong> comunicaciones@luzrenaceperu.org</p>
-                                            <p><strong className="text-white block">Alianzas y Donaciones:</strong> impacto@luzrenaceperu.org</p>
+                                        <h3 className="font-bold font-sans uppercase text-sm tracking-wider text-neutral-500 mb-1">Correos Oficiales</h3>
+                                        <div className="space-y-2 text-sm text-neutral-dark font-sans">
+                                            <p><strong className="text-primary block">Consultas Generales:</strong> contacto@luzrenaceperu.org</p>
+                                            <p><strong className="text-primary block">Área de Prensa:</strong> comunicaciones@luzrenaceperu.org</p>
+                                            <p><strong className="text-primary block">Alianzas y Donaciones:</strong> impacto@luzrenaceperu.org</p>
                                         </div>
                                     </div>
                                 </li>
